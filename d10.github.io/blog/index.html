@@ -1,0 +1,14 @@
+---
+layout: default
+title: Archives
+---
+<h1>Archives</h1>
+<div class="blog-archives cf">
+  {% for post in site.posts %}
+    <div class="left">
+      <h3><a href="{{ post.url | remove: '/index.html' }}">{{ post.title }}</a></h3>
+      <time>{{ post.date | date_to_long_string }}</time>
+      <a href="{{ post.url | remove: '/index.html' }}">Read more</a>
+    </div>
+  {% endfor %}
+</div>

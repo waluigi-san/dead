@@ -1,0 +1,14 @@
+---
+layout: default
+title: Home
+---
+{% assign post = site.posts.first %}
+<div class="left medium">
+<h2>Hi!</h2>
+I'm Benjamin Tan, a front-end web developer.
+{% include article.html %}
+</div>
+<div class="small right">
+  {% for i in site.posts limit: 4 %}
+  {% endfor %}
+</div>

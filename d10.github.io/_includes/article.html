@@ -1,0 +1,23 @@
+<h1>{{ post.title }}</h1>
+<span>Posted on <time>{{ post.date | date: "%d %B %Y" }}</time></span>
+
+{% if post == page %}
+<div id="share-inner">
+    <div class="g-plusone"></div>
+	<div class="g-plus" data-action="share" data-annotation="bubble"></div>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+</div>
+{{ content }}
+
+<div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script type="text/javascript">
+    loadScript( 'https://apis.google.com/js/plusone.js' ); // Google+ and +1
+	loadScript( 'https://platform.twitter.com/widgets.js' ); // Twitter tweet
+	// Disqus comments
+    var disqus_shortname = 'demoneaux10';
+    loadScript('http://' + disqus_shortname + '.disqus.com/embed.js');
+</script>
+{% else %}{{ post.content }}{% endif %}

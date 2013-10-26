@@ -1,0 +1,23 @@
+{
+  "name": "ghedit",
+  "description": "A Mobile GitHub File Editor",
+  "main": "ghedit.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/d10/ghedit.git"
+  },
+  "keywords": [
+    "github",
+    "editor",
+    "file",
+    "mobile"
+  ],
+  "author": "Benjamin Tan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d10/ghedit/issues"
+  }
+}

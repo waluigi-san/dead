@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Media Queries for Responsive Design
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+   nav ul {
+      display: block;
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   ul, ol {
+      margin-left: -24px
+      padding-left: 24px;
+   }
+   
+   blockquote {
+      margin-left: -24px
+      padding-left: 24px;
+   }
+   
+   .right {
+      float: right;
+   }
+   
+   nav ul li, .left {
+      float: left;
+   }
+}
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (min-width: 960px) {
+   header {
+      width: 75%;
+   }
+
+   #main {
+      width: 75%;
+      padding-right: 0;
+      padding-left: 0;
+   }
+}

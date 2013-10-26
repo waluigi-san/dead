@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: #349EDB;
+}
+
+body {
+   font-size: 1em;
+   line-height: 1.5;
+   font-family: 'Helvetica Neue', Helvetica, Arial, freesans, clean, sans-serif;
+}
+
+.wf-loading p {
+   visibility: hidden;
+}
+
+.wf-active {
+   font-size: 1.0625em;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+::-webkit-input-placeholder { }
+input:-moz-placeholder { {
+*/
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/*
+ * Links
+ */
+
+a,
+a:visited {
+    color: #069;
+    text-decoration: underline;
+}
+
+a:hover {
+   text-decoration: none;
+   text-shadow: rgba(0, 102, 153, 0.5) 0 0 5px;
+}
+
+p {
+   -webkit-hyphens: auto;
+   -webkit-hyphenate-character: "\2012";
+   -webkit-hyphenate-limit-after: 1;
+   -webkit-hyphenate-limit-before: 3;
+}
+
+/*
+ * Headings
+ */
+
+h1, h2, h3, h4, h5, h6 {
+   font-weight: normal;
+}
+
+h1 {
+   font-size: 1.5em;
+   margin-top: 0.5em;
+}
+
+h2 {
+   font-size: 1.375em;
+   margin-top: 0.6818181818em;
+}
+
+h3, h4 {
+   font-size: 1.25em;
+   margin-top: 0.9em;
+}
+
+h5, h6 {
+   font-size: 1.125em;
+   margin-top: 1.166666667em;
+}
+
+h3, h5 {
+   text-transform: uppercase;
+}
+
+ul, ol {
+   margin: 1.5em 0;
+}
+
+li ul, li ol {
+   margin: 0;
+}
+
+blockquote {
+   margin: 1.5em 0;
+   border-left: 1px solid #C8C8C8;
+   font-style: italic;
+}
