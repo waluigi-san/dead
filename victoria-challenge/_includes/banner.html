@@ -1,0 +1,27 @@
+<div id="intro"><div class="container">
+    <div class="row">
+      {% if page.home %}
+      <h1>
+        <span class="col-md-5" id="victoria">Victoria</span>
+        <img class="col-md-2" src="resources/vslogo.gif">
+        <span class="col-md-5" id="challenge">Challenge</span>
+      </h1>
+      {% endif %}
+    </div>
+    <div class="row">
+      {% if page.header %}
+      {{ page.header }}
+      {% endif %}
+    </div>
+    <div class="row">
+      <h2>{{ page.year }}</h2>
+      {% if page.theme %}
+      <h3>{{ page.theme }}</h3>
+      {% endif %}
+    </div>
+    {% if page.home %}
+    <div class="row">
+      {{ page.img }}
+    </div>
+    {% endif %}
+</div></div>

@@ -1,0 +1,16 @@
+title: Victoria Challenge
+description: "Victoria Challenge"
+url: https://d10.github.io
+baseurl: /victoria-challenge
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: base
+      gallery: true
+
+nav_brand: '<span id="vic">Victoria</span><span id="cha">Challenge</span>'
+current_year: 2015
+years:
+#  - 2011
+copyright: '© 2015 <a href="http://vs.moe.edu.sg/">Victoria School</a>'

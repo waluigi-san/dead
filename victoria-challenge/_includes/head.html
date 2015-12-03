@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:200,400,700">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/resources/main.css">
+{% if page.gallery %}
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/resources/photoswipe.css"> 
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/resources/df-skin/df-skin.css"> 
+{% endif %}

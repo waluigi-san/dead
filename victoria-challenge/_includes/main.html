@@ -1,0 +1,25 @@
+<div id="main"><div class="container">
+{% capture main_content %}
+{{ content | markdownify | replace:'<h2 ','<h2 class="col-md-3" ' | replace:'<p>','<p class="col-md-12">' }}
+{% endcapture %}
+
+{% if main_content contains 'div class' %}
+  {{ main_content }}
+{% else %}
+  {{ main_content | prepend:'<div class="row">' | append:'</div>' }}
+{% endif %}
+
+{% if page.images %}
+<div class="row"><div class="gallery">
+  {% for image in page.images %}
+  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="col-md-4">
+    <a href="{{ image[0] }}" data-size="{{ image[1] }}">
+      <img src="{{ image[0] }}" alt="{{ image[2] }}">
+    </a>
+    <figcaption itemprop="caption description">{{ image[2] }}</figcaption>
+  </figure>
+  {% endfor %}
+</div></div>
+{% endif %}
+
+</div></div>

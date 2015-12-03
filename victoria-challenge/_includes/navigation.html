@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+
+      <!-- Menu button on mobile -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/">{{ site.nav_brand }} {{ page.year }}</a>
+    </div>
+
+    <div id="navbar" class="navbar-collapse collapse">
+      <!-- Left menu -->
+      <ul class="nav navbar-nav navbar-left">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{{ site.url }}{{ site.baseurl }}/">VS</a></li>
+            <li><a href="{{ site.url }}{{ site.baseurl }}/">VC</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Right menu -->
+      <ul class="nav navbar-nav navbar-right">
+        <!--
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Previous Years <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            {% for year in site.years %}
+            <li><a href="{{ site.url }}{{ site.baseurl }}/{{ year }}">{{ year }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        -->
+        <li><a href="{{ site.url }}{{ site.baseurl }}/projects">Projects</a></li>
+        <li><a href="{{ site.url }}{{ site.baseurl }}/videos">Videos</a></li>
+        <li><a href="http://www.victoria.moe.edu.sg/victoria_challenge/">Previous Years</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
