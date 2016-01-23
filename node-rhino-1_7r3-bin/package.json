@@ -1,0 +1,14 @@
+{
+  "name": "rhino-1_7r3-bin",
+  "version": "1.0.1",
+  "description": "Node.js binary wrapper for Rhino 1.7R3.",
+  "homepage": "https://github.com/d10/node-rhino-1_7r3-bin",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": { "rhino1_7r3": "bin/rhino" },
+  "files": ["index.js", "LICENSE.txt", "README.md", "bin", "rhino1_7R3"],
+  "keywords": ["bin", "wrapper", "rhino"],
+  "author": "Benjamin Tan <demoneaux@gmail.com> (https://d10.github.io/)",
+  "bugs": "https://github.com/d10/node-rhino-1_7r3-bin/issues",
+  "repository": "d10/node-rhino-1_7r3-bin"
+}
