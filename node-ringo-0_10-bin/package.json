@@ -1,0 +1,14 @@
+{
+  "name": "ringo-0_10-bin",
+  "version": "1.0.0",
+  "description": "Node.js binary wrapper for RingoJS 0.10.",
+  "homepage": "https://github.com/d10/node-ringo-0_10-bin",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": { "ringo0_10": "bin/ringo" },
+  "files": ["index.js", "LICENSE.txt", "README.md", "bin", "ringojs-0.10"],
+  "keywords": ["bin", "wrapper", "ringo"],
+  "author": "Benjamin Tan <demoneaux@gmail.com> (https://d10.github.io/)",
+  "bugs": "https://github.com/d10/node-ringo-0_10-bin/issues",
+  "repository": "d10/node-ringo-0_10-bin"
+}
