@@ -1,0 +1,15 @@
+{
+  "name": "narwhal-bin",
+  "version": "1.0.0",
+  "description": "Node.js binary wrapper for Narwhal 0.3.2",
+  "homepage": "https://github.com/d10/node-narwhal-bin",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": { "narwhal": "bin/narwhal" },
+  "files": ["index.js", "LICENSE.txt", "README.md", "bin", "narwhal-0.3.2"],
+  "keywords": ["bin", "wrapper", "narwhal"],
+  "author": "Benjamin Tan <demoneaux@gmail.com> (https://d10.github.io/)",
+  "bugs": "https://github.com/d10/node-narwhal-bin/issues",
+  "repository": "d10/node-narwhal-bin",
+  "scripts": { "test": "node test/test.js" }
+}
