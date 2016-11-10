@@ -1,0 +1,22 @@
+{
+  "name": "lodash-site",
+  "private": true,
+  "scripts": {
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "@alrra/travis-scripts": "^1.1.1",
+    "del": "^2.2.0",
+    "docdown": "~0.3.0",
+    "jsdoc": "^3.4.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-nunjucks": "^2.1.0",
+    "highlight.js": "^9.0.0",
+    "marked": "~0.3.5",
+    "mkdirp": "~0.5.1",
+    "nunjucks": "^2.2.0",
+    "nunjucks-markdown": "^1.1.0",
+    "semver": "^5.1.0",
+    "through2": "^2.0.0"
+  }
+}

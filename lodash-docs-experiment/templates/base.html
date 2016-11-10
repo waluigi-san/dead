@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" id="{{ html_id }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="stylesheet" href="{{ site }}/css/main.css">
+    <link rel="feed alternate" type="application/atom+xml" href="https://github.com/lodash/lodash/commits/master.atom">
+    <!--[if lt IE 9]><script src="{{ site }}/js/html5.js"></script><![endif]-->
+  </head>
+  <body>
+    <input type="checkbox" id="open-nav">
+    <header id="navbar" class="cf">
+      <div id="navbar-header" class="cf">
+        <label class="open-nav" for="open-nav">
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </label>
+        <a class="navbar-brand" href="{{ site }}">
+          <img width="30" src="{{ site }}/img/logo.png" alt="lodash logo">
+          <span>lodash {{ version }}</span>
+        </a>
+      </div>
+      <nav>
+        <ul class="cf">
+          <li><a href="{{ site }}/docs">Documentation</a></li>
+          <li><a href="{{ site }}/custom-builds">Custom Builds</a></li>
+        </ul>
+      </nav>
+      {% if html_id == "docs" %}
+      <aside>
+        {% block sidebar %}{% endblock %}
+      </aside>
+      {% endif %}
+    </header>
+
+    <section id="main">
+      {% block content %}{% endblock %}
+      <footer></footer>
+    </section>
+
+    <script src="{{ site }}/js/{{ version }}/lodash.js"></script>
+    {% if html_id == "docs" %}
+    <script src="{{ site }}/js/docs.js"></script>
+    {% endif %}
+    <!-- <script>_gaq=[['_setAccount','UA-6065217-64'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script> -->
+  </body>
+</html>

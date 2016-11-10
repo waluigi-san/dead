@@ -1,0 +1,82 @@
+{% extends "templates/base.html" %}
+
+{% set title = "lodash documentation" %}
+{% set description = "lodash docs" %}
+{% set html_id = "docs" %}
+
+{% block sidebar %}
+<div id=filter-container>
+  <input tabindex="1" id="name-filter" placeholder="Filter" type="text" autofocus>
+</div>
+<div class="toc-container">
+{% for category in docs.categories %}
+<h2><code>{{ category }}</code></h2>
+<ul>
+  {% for doc in docs[category] %}
+  <li class="func" data-name="{{doc.name}}" data-category="{{doc.category}}">
+    <a href="#{{doc.name}}">
+    <code>{{doc.longname}}</code>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="doc-container">
+{% for category in docs.categories %}
+  <div>
+    <h2><code>“{{ category }}” Methods</code></h2>
+    {% for doc in docs[category] %}
+    <div id="{{ doc.name }}">
+{% markdown %}
+### `{{ doc.longname }}`
+
+[#](#{{ doc.name }}) [&#x24C8;]({{ doc.url }} "View in source") [&#x24C9;](#toc)
+
+{{ doc.description }}
+{% endmarkdown %}
+
+      {% if doc.aliases %}
+      #### Aliases
+
+        '*' +
+        map(aliases, function(alias) {
+          return '${member}${separator}${name}';
+        }).join(', ') +
+        '*'
+      {% endif %}
+
+      {% if doc.params %}
+      {% markdown %}
+      #### Arguments
+
+      {% for param in doc.params %}
+      1. `{{ param.name | safe }}` *({{ param.type | markdown_escape }})*: {{ param.description }}
+      {%- endfor %}
+      {% endmarkdown %}
+      {% endif %}
+
+      {% if doc.returns %}
+      {% markdown %}
+      #### Returns
+
+      *({{ doc.returns.type | markdown_escape }})*: {{ doc.returns.description }}
+      {% endmarkdown %}
+      {% endif %}
+
+      {% if doc.example %}
+{% markdown %}
+```js
+{{ doc.example }}
+```
+{% endmarkdown %}
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>
+{% endblock %}
